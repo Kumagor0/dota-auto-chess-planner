@@ -33,7 +33,7 @@ export const featuresPerks = {
   },
   Troll: {
     2: 'Attack speed increased by 30 for all friendly trolls.',
-    4: 'Attack speed increased by 30 for all friendly trolls.',
+    4: 'Attack speed increased by 30 for all allies.',
   },
   Beast: {
     2: 'Attack damage increased by 10% for all allies.',
@@ -73,7 +73,8 @@ export const featuresPerks = {
     6: 'Lifesteal increased by 30% for all allies.',
   },
   Warrior: {
-    3: 'Armor increased by 8 for all friendly warriors.',
-    6: 'Armor increased by 10 for all friendly warriors.',
+    3: 'Armor increased by 7 for all friendly warriors.',
+    6: 'Armor increased by an additional 8 for all friendly warriors.',
+    9: 'Armor increased by an additional 9 for all friendly warriors.',
   },
 };
