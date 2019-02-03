@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "query-string": "^6.2.0",
     "ramda": "^0.26.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts-ts": "3.1.0"
   },
   "scripts": {
@@ -19,9 +21,11 @@
   "devDependencies": {
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.21",
+    "@types/query-string": "^6.2.0",
     "@types/ramda": "^0.25.47",
     "@types/react": "^16.8.1",
     "@types/react-dom": "^16.0.11",
+    "@types/react-router-dom": "^4.3.1",
     "gh-pages": "^2.0.1",
     "typescript": "^3.3.1"
   },

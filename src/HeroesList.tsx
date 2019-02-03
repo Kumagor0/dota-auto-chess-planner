@@ -2,10 +2,16 @@ import * as React from 'react';
 
 import { ascend, prop, descend, sortWith } from 'ramda';
 
-import { heroes, HeroType, getFeaturesCount } from './heroes';
+import {
+  heroes,
+  HeroType,
+  getFeaturesCount,
+  HeroNamesType,
+  heroNamesToString,
+} from './heroes';
 import { colors } from './colors';
-
-type PickedHeroesType = Array<HeroType['name']>;
+import { withRouter, RouteComponentProps } from 'react-router';
+import { Link } from 'react-router-dom';
 
 type SortableColumnType = 'name' | 'species' | 'class' | 'cost';
 
@@ -43,8 +49,8 @@ const getHeroesComparators = (
 class HeroesTable extends React.Component<
   {
     heroes: Array<HeroType>;
-    pickedHeroes: PickedHeroesType;
-    onPickedHeroesChange: (newPickedHeroes: PickedHeroesType) => void;
+    pickedHeroes: HeroNamesType;
+    onPickedHeroesChange: (newPickedHeroes: HeroNamesType) => void;
     onSort: (column: SortableColumnType) => void;
   },
   {}
@@ -149,22 +155,29 @@ class HeroesTable extends React.Component<
 }
 
 type HeroesListState = {
-  pickedHeroes: PickedHeroesType;
   sortBy: SortableColumnType;
   sortAscending: boolean;
 };
 
-export class HeroesList extends React.Component<{}, HeroesListState> {
+class HeroesList extends React.Component<
+  RouteComponentProps<{}> & {
+    pickedHeroes: HeroNamesType;
+  },
+  HeroesListState
+> {
   state: HeroesListState = {
-    pickedHeroes: [],
     sortBy: 'cost',
     sortAscending: true,
   };
 
-  handlePickedHeroesChange = (newPickedHeroes: PickedHeroesType) => {
-    this.setState({
-      pickedHeroes: newPickedHeroes,
-    });
+  handlePickedHeroesChange = (newPickedHeroes: HeroNamesType) => {
+    const {
+      location: { pathname },
+    } = this.props;
+
+    this.props.history.push(
+      `${pathname}?heroes=${heroNamesToString(newPickedHeroes)}`
+    );
   };
 
   handleSort = (column: SortableColumnType) => {
@@ -175,14 +188,19 @@ export class HeroesList extends React.Component<{}, HeroesListState> {
   };
 
   render() {
-    const { pickedHeroes, sortBy, sortAscending } = this.state;
+    const { sortBy, sortAscending } = this.state;
+    const { pickedHeroes } = this.props;
 
     return (
       <div style={{ width: '100%' }}>
         <h2 style={{ color: 'White' }}>
           Click on heroes to add/remove them to/from your team. Click on column
-          names to sort the list.
+          names to sort the list. Copy link from the address bar to share your
+          lineup.
         </h2>
+        <h3>
+          <Link to="/">Clear</Link>
+        </h3>
         <div style={{ flexDirection: 'row', display: 'flex' }}>
           <div style={{ flex: 1 }}>
             <HeroesTable
@@ -235,3 +253,5 @@ export class HeroesList extends React.Component<{}, HeroesListState> {
     );
   }
 }
+
+export const HeroesListWithRouter = withRouter(HeroesList);

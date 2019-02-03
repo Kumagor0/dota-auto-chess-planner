@@ -1,6 +1,9 @@
 import * as React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import * as queryString from 'query-string';
 
-import { HeroesList } from './HeroesList';
+import { stringToHeroNames } from './heroes';
+import { HeroesListWithRouter } from './HeroesList';
 
 class App extends React.Component {
   public render() {
@@ -9,7 +12,24 @@ class App extends React.Component {
         className="App"
         style={{ backgroundColor: 'Black', fontSize: '20px' }}
       >
-        <HeroesList />
+        <BrowserRouter>
+          <Route
+            path="/"
+            render={({ location: { search } }) => {
+              const { heroes: heroesString } = queryString.parse(search);
+
+              if (!heroesString || typeof heroesString !== 'string') {
+                return <HeroesListWithRouter pickedHeroes={[]} />;
+              }
+
+              return (
+                <HeroesListWithRouter
+                  pickedHeroes={stringToHeroNames(heroesString)}
+                />
+              );
+            }}
+          />
+        </BrowserRouter>
       </div>
     );
   }
