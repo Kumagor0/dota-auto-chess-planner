@@ -20,7 +20,7 @@ export const featuresPerks = {
   },
   Element: {
     2: 'All friendly elements have 30% chance to turn attacker into stone for 3s when attacked by melee chesses.',
-    4: 'All friendly elements have 30% chance to turn attacker into stone for 3s when attacked by melee chesses.',
+    4: 'All allies have 30% chance to turn attacker into stone for 3s when attacked by melee chesses.',
   },
   Human: {
     2: 'All friendly humans have 20% chance to disarm target for 3s on damage deal.',
