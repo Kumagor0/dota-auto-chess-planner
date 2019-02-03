@@ -41,8 +41,8 @@ export const featuresPerks = {
     6: 'Attack damage increased by 20% for all allies.',
   },
   Assassin: {
-    3: 'All friendly assasins have 10% chance to deal 4x damage.',
-    6: 'All friendly assasins have 20% chance to deal 4x damage.',
+    3: 'All friendly assasins have 10% chance to deal 3.5x damage.',
+    6: 'All friendly assasins have 20% chance to deal 4.5x damage.',
   },
   Druid: {
     2: 'two ★druids can upgrade to a ★★druid.',
