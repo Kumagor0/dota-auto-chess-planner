@@ -67,13 +67,14 @@ class HeroesTable extends React.Component<
     const { heroes, pickedHeroes, onSort } = this.props;
 
     return (
-      <table>
+      <table style={{ width: '100%' }}>
         <thead style={{ color: 'White' }}>
-          <tr>
+          <tr style={{ display: 'flex', width: '100%' }}>
             <th
               onClick={() => {
                 onSort('name');
               }}
+              style={{ flex: 4 }}
             >
               Name
             </th>
@@ -81,6 +82,7 @@ class HeroesTable extends React.Component<
               onClick={() => {
                 onSort('species');
               }}
+              style={{ flex: 3 }}
             >
               Species
             </th>
@@ -88,6 +90,7 @@ class HeroesTable extends React.Component<
               onClick={() => {
                 onSort('class');
               }}
+              style={{ flex: 3 }}
             >
               Class
             </th>
@@ -96,6 +99,7 @@ class HeroesTable extends React.Component<
               onClick={() => {
                 onSort('cost');
               }}
+              style={{ flex: 1 }}
             >
               Cost
             </th>
@@ -113,23 +117,30 @@ class HeroesTable extends React.Component<
                 backgroundColor:
                   pickedHeroes.indexOf(name) === -1 ? 'Black' : 'DarkSlateGrey',
                 cursor: 'pointer',
+                display: 'flex',
               }}
             >
-              <td style={{ color: colors.cost[cost], fontWeight: 'bold' }}>
+              <td
+                style={{
+                  color: colors.cost[cost],
+                  fontWeight: 'bold',
+                  flex: 4,
+                }}
+              >
                 {name}
               </td>
-              <td>
+              <td style={{ flex: 3 }}>
                 {species.map(speciesName => (
                   <React.Fragment key={speciesName}>
                     <Feature name={speciesName} />{' '}
                   </React.Fragment>
                 ))}
               </td>
-              <td>
+              <td style={{ flex: 3 }}>
                 <Feature name={className} />
               </td>
               {/* <td> </td> */}
-              <td style={{ color: 'White' }}>{cost}</td>
+              <td style={{ color: 'White', flex: 1 }}>{cost}</td>
             </tr>
           ))}
         </tbody>
