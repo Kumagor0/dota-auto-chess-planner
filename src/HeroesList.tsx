@@ -189,7 +189,10 @@ class HeroesList extends React.Component<
 
   render() {
     const { sortBy, sortAscending } = this.state;
-    const { pickedHeroes } = this.props;
+    const {
+      pickedHeroes,
+      location: { pathname },
+    } = this.props;
 
     return (
       <div style={{ width: '100%' }}>
@@ -199,7 +202,7 @@ class HeroesList extends React.Component<
           lineup.
         </h2>
         <h3>
-          <Link to="/">Clear</Link>
+          <Link to={pathname}>Clear</Link>
         </h3>
         <div style={{ flexDirection: 'row', display: 'flex' }}>
           <div style={{ flex: 1 }}>
