@@ -116,7 +116,6 @@ class HeroesTable extends React.Component<
               style={{
                 backgroundColor:
                   pickedHeroes.indexOf(name) === -1 ? 'Black' : 'DarkSlateGrey',
-                cursor: 'pointer',
                 display: 'flex',
               }}
             >
@@ -180,9 +179,10 @@ export class HeroesList extends React.Component<{}, HeroesListState> {
 
     return (
       <div style={{ width: '100%' }}>
-        <h1 style={{ color: 'White' }}>
-          Click on heroes to add/remove them to/from your team.
-        </h1>
+        <h2 style={{ color: 'White' }}>
+          Click on heroes to add/remove them to/from your team. Click on column
+          names to sort the list.
+        </h2>
         <div style={{ flexDirection: 'row', display: 'flex' }}>
           <div style={{ flex: 1 }}>
             <HeroesTable
