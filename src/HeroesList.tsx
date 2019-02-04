@@ -23,17 +23,17 @@ const Feature = ({
   name: string;
   highlight?: boolean;
 }) => (
-  <span
-    style={{
-      color: colors.features[name],
-      borderWidth: '1',
-      borderColor: colors.features[name],
-      borderStyle: highlight ? 'solid' : 'none',
-    }}
-  >
-    {name}
-  </span>
-);
+    <span
+      style={{
+        color: colors.features[name],
+        borderWidth: '1',
+        borderColor: colors.features[name],
+        borderStyle: highlight ? 'solid' : 'none',
+      }}
+    >
+      {name}
+    </span>
+  );
 
 const getHeroesComparators = (
   column: SortableColumnType,
@@ -68,9 +68,10 @@ class HeroesTable extends React.Component<
     pickedHeroes: HeroNamesType;
     onPickedHeroesChange: (newPickedHeroes: HeroNamesType) => void;
     onSort: (column: SortableColumnType) => void;
+    search: string;
   },
   {}
-> {
+  > {
   handleHeroClick = (heroName: HeroType['name']) => {
     const index = this.props.pickedHeroes.indexOf(heroName);
 
@@ -86,7 +87,7 @@ class HeroesTable extends React.Component<
   };
 
   render() {
-    const { heroes, pickedHeroes, onSort } = this.props;
+    const { heroes, pickedHeroes, onSort, search } = this.props;
 
     const features = getFeaturesList(pickedHeroes);
 
@@ -149,6 +150,7 @@ class HeroesTable extends React.Component<
                   fontWeight: 'bold',
                   flex: 4,
                 }}
+                className={search !== '' && name.toLowerCase().includes(search.toLowerCase()) ? 'highlight' : ''}
               >
                 {name}
               </td>
@@ -181,6 +183,7 @@ class HeroesTable extends React.Component<
 type HeroesListState = {
   sortBy: SortableColumnType;
   sortAscending: boolean;
+  search: string;
 };
 
 class HeroesList extends React.Component<
@@ -188,11 +191,17 @@ class HeroesList extends React.Component<
     pickedHeroes: HeroNamesType;
   },
   HeroesListState
-> {
+  > {
   state: HeroesListState = {
     sortBy: 'cost',
     sortAscending: true,
+    search: '',
   };
+
+  updateSearch = (event: any) => {
+    const searchString = event.target.value;
+    this.setState({ search: searchString });
+  }
 
   handlePickedHeroesChange = (newPickedHeroes: HeroNamesType) => {
     const {
@@ -225,9 +234,12 @@ class HeroesList extends React.Component<
           names to sort the list. Copy link from the address bar to share your
           lineup.
         </h2>
-        <h3>
-          <Link to={pathname}>Clear</Link>
-        </h3>
+        <div style={{ flexDirection: 'row', display: 'flex' }}>
+          <h3 style={{ float: 'left', display: 'inline' }}>
+            <Link to={pathname}>Clear</Link>
+          </h3>
+          <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch} style={{ float: 'left', display: 'inline', margin: 'auto', marginLeft: '20px', height: '24px' }} />
+        </div>
         <div style={{ flexDirection: 'row', display: 'flex' }}>
           <div style={{ flex: 1 }}>
             <HeroesTable
@@ -240,6 +252,7 @@ class HeroesList extends React.Component<
               pickedHeroes={pickedHeroes}
               onPickedHeroesChange={this.handlePickedHeroesChange}
               onSort={this.handleSort}
+              search={this.state.search}
             />
           </div>
           <div style={{ flex: 1 }}>
@@ -255,6 +268,7 @@ class HeroesList extends React.Component<
               pickedHeroes={pickedHeroes}
               onPickedHeroesChange={this.handlePickedHeroesChange}
               onSort={this.handleSort}
+              search={this.state.search}
             />
           </div>
           <div style={{ flex: 1 }}>
