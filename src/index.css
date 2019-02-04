@@ -13,3 +13,7 @@ th {
 tr {
   cursor: pointer;
 }
+
+.highlight {
+  background-color: #bdbdbd54;
+}
