@@ -369,14 +369,17 @@ export const heroes: Array<HeroType> = [
   },
 ];
 
-export const getFeaturesCount = (names: Array<HeroType['name']>) => {
-  const allFeatures = names
+export const getFeaturesList = (names: Array<HeroType['name']>) =>
+  names
     .map(heroName => {
       const hero = heroes.find(({ name }) => name === heroName);
 
       return hero ? [...hero.species, hero.className] : [];
     })
     .reduce((prev, cur) => prev.concat(cur), []);
+
+export const getFeaturesCount = (names: Array<HeroType['name']>) => {
+  const allFeatures = getFeaturesList(names);
 
   return toPairs(countBy(x => x, allFeatures))
     .sort(([, count1], [, count2]) => count2 - count1)

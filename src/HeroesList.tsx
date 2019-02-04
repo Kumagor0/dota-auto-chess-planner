@@ -8,6 +8,7 @@ import {
   getFeaturesCount,
   HeroNamesType,
   heroNamesToString,
+  getFeaturesList,
 } from './heroes';
 import { colors } from './colors';
 import { withRouter, RouteComponentProps } from 'react-router';
@@ -15,8 +16,23 @@ import { Link } from 'react-router-dom';
 
 type SortableColumnType = 'name' | 'species' | 'class' | 'cost';
 
-const Feature = ({ name }: { name: string }) => (
-  <span style={{ color: colors.features[name] }}>{name}</span>
+const Feature = ({
+  name,
+  highlight,
+}: {
+  name: string;
+  highlight?: boolean;
+}) => (
+  <span
+    style={{
+      color: colors.features[name],
+      borderWidth: '1',
+      borderColor: colors.features[name],
+      borderStyle: highlight ? 'solid' : 'none',
+    }}
+  >
+    {name}
+  </span>
 );
 
 const getHeroesComparators = (
@@ -71,6 +87,8 @@ class HeroesTable extends React.Component<
 
   render() {
     const { heroes, pickedHeroes, onSort } = this.props;
+
+    const features = getFeaturesList(pickedHeroes);
 
     return (
       <table style={{ width: '100%' }}>
@@ -137,12 +155,18 @@ class HeroesTable extends React.Component<
               <td style={{ flex: 3 }}>
                 {species.map(speciesName => (
                   <React.Fragment key={speciesName}>
-                    <Feature name={speciesName} />{' '}
+                    <Feature
+                      name={speciesName}
+                      highlight={features.indexOf(speciesName) !== -1}
+                    />{' '}
                   </React.Fragment>
                 ))}
               </td>
               <td style={{ flex: 3 }}>
-                <Feature name={className} />
+                <Feature
+                  name={className}
+                  highlight={features.indexOf(className) !== -1}
+                />
               </td>
               {/* <td> </td> */}
               <td style={{ color: 'White', flex: 1 }}>{cost}</td>
