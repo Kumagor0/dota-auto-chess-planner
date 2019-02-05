@@ -242,7 +242,7 @@ class HeroesList extends React.Component<
         <h3 style={{ color: 'White' }}>Last patch: 2018/02/05</h3>
         <div style={{ flexDirection: 'row', display: 'flex' }}>
           <h3 style={{ float: 'left', display: 'inline' }}>
-            <Link to={pathname}>Clear</Link>
+            <Link to={pathname}>Clear lineup</Link>
           </h3>
           <input
             type="text"
