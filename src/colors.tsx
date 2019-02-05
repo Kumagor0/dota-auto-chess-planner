@@ -2,7 +2,7 @@ export const colors = {
   cost: {
     1: 'LightGrey',
     2: 'MediumPurple',
-    3: 'Blue',
+    3: 'MediumBlue',
     4: 'Magenta',
     5: 'DarkOrange',
   },
