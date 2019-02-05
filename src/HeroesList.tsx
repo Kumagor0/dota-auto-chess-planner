@@ -23,17 +23,17 @@ const Feature = ({
   name: string;
   highlight?: boolean;
 }) => (
-    <span
-      style={{
-        color: colors.features[name],
-        borderWidth: '1',
-        borderColor: colors.features[name],
-        borderStyle: highlight ? 'solid' : 'none',
-      }}
-    >
-      {name}
-    </span>
-  );
+  <span
+    style={{
+      color: colors.features[name],
+      borderWidth: '1',
+      borderColor: colors.features[name],
+      borderStyle: highlight ? 'solid' : 'none',
+    }}
+  >
+    {name}
+  </span>
+);
 
 const getHeroesComparators = (
   column: SortableColumnType,
@@ -71,7 +71,7 @@ class HeroesTable extends React.Component<
     search: string;
   },
   {}
-  > {
+> {
   handleHeroClick = (heroName: HeroType['name']) => {
     const index = this.props.pickedHeroes.indexOf(heroName);
 
@@ -150,7 +150,12 @@ class HeroesTable extends React.Component<
                   fontWeight: 'bold',
                   flex: 4,
                 }}
-                className={search !== '' && name.toLowerCase().includes(search.toLowerCase()) ? 'highlight' : ''}
+                className={
+                  search !== '' &&
+                  name.toLowerCase().includes(search.toLowerCase())
+                    ? 'highlight'
+                    : ''
+                }
               >
                 {name}
               </td>
@@ -191,7 +196,7 @@ class HeroesList extends React.Component<
     pickedHeroes: HeroNamesType;
   },
   HeroesListState
-  > {
+> {
   state: HeroesListState = {
     sortBy: 'cost',
     sortAscending: true,
@@ -201,7 +206,7 @@ class HeroesList extends React.Component<
   updateSearch = (event: any) => {
     const searchString = event.target.value;
     this.setState({ search: searchString });
-  }
+  };
 
   handlePickedHeroesChange = (newPickedHeroes: HeroNamesType) => {
     const {
@@ -238,7 +243,19 @@ class HeroesList extends React.Component<
           <h3 style={{ float: 'left', display: 'inline' }}>
             <Link to={pathname}>Clear</Link>
           </h3>
-          <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch} style={{ float: 'left', display: 'inline', margin: 'auto', marginLeft: '20px', height: '24px' }} />
+          <input
+            type="text"
+            placeholder="Search"
+            value={this.state.search}
+            onChange={this.updateSearch}
+            style={{
+              float: 'left',
+              display: 'inline',
+              margin: 'auto',
+              marginLeft: '20px',
+              height: '24px',
+            }}
+          />
         </div>
         <div style={{ flexDirection: 'row', display: 'flex' }}>
           <div style={{ flex: 1 }}>
