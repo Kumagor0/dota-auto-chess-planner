@@ -58,8 +58,8 @@ export const featuresPerks = {
     6: 'All friendly knights +45% chance to get a shield.',
   },
   Mage: {
-    3: 'Magic resistance decreased by 50% for all enemies.',
-    6: 'Magic resistance decreased by an additional 30% for all enemies.',
+    3: 'Magic resistance decreased by 40% for all enemies.',
+    6: 'Magic resistance decreased by an additional 40% for all enemies.',
   },
   Mech: {
     2: 'HP regeneration increased by 15 for all friendly mechs.',
