@@ -203,7 +203,7 @@ class HeroesList extends React.Component<
     search: '',
   };
 
-  updateSearch = (event: any) => {
+  updateSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchString = event.target.value;
     this.setState({ search: searchString });
   };
