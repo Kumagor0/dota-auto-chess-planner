@@ -19,20 +19,20 @@ export const featuresPerks = {
     6: 'Armor and hp regeneration increased by 15 for all friendly goblins.',
   },
   Element: {
-    2: 'All friendly elements have 30% chance to turn attacker into stone for 3s when attacked by melee chesses.',
-    4: 'All allies have 30% chance to turn attacker into stone for 3s when attacked by melee chesses.',
+    2: 'All friendly elements have 30% chance to turn attacker into stone for 4s when attacked by melee chesses.',
+    4: 'All allies have 30% chance to turn attacker into stone for 4s when attacked by melee chesses.',
   },
   Human: {
-    2: 'All friendly humans have 20% chance to disarm target for 3s on damage deal.',
-    4: 'All friendly humans have 25% chance to disarm target for 3s on damage deal.',
-    6: 'All friendly humans have 30% chance to disarm target for 3s on damage deal.',
+    2: 'All friendly humans have 20% chance to silence target for 4s on damage deal.',
+    4: 'All friendly humans have 25% chance to silence target for 4s on damage deal.',
+    6: 'All friendly humans have 30% chance to silence target for 4s on damage deal.',
   },
   Naga: {
     2: 'Magic resistance increased by 20 for all allies.',
     4: 'Magic resistance increased by 40 for all allies.',
   },
   Troll: {
-    2: 'Attack speed increased by 30 for all friendly trolls.',
+    2: 'Attack speed increased by 35 for all friendly trolls.',
     4: 'Attack speed increased by 30 for all allies.',
   },
   Beast: {
