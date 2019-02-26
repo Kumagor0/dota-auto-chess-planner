@@ -17,6 +17,7 @@ export const colors = {
     Goblin: 'FireBrick',
     Element: 'Yellow',
     Human: 'White',
+    Satyr: 'MediumBlue',
     Naga: 'MediumBlue',
     Troll: 'Silver',
     Beast: 'Green',
