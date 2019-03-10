@@ -3,7 +3,7 @@ export const featuresPerks = {
     3: 'All friendly dragons have 100 mana when battle starts.',
   },
   Elf: {
-    3: 'Evasion increased by 25% for all friendly elfs.',
+    3: 'Evasion increased by 20% for all friendly elfs.',
     6: 'Evasion increased by 25% for all friendly elfs.',
     9: 'Evasion increased by 30% for all friendly elfs.',
   },
@@ -17,7 +17,7 @@ export const featuresPerks = {
   },
   Goblin: {
     3: 'Armor and hp regeneration increased by 15 for a random ally.',
-    6: 'Armor and hp regeneration increased by 15 for all friendly goblins.',
+    6: 'Armor and hp regeneration increased by 15 for all allies.',
   },
   Element: {
     2: 'All friendly elements have 30% chance to turn attacker into stone for 4s when attacked by melee chesses.',
@@ -55,7 +55,7 @@ export const featuresPerks = {
   },
   Hunter: {
     3: 'Attack damage increased by 25% for all friendly hunters.',
-    6: 'Attack damage increased by 25% for all friendly hunters.',
+    6: 'Attack damage increased by 30% for all friendly hunters.',
   },
   Knight: {
     2: 'All friendly knights +25% chance to get a shield.',
