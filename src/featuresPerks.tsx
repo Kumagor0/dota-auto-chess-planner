@@ -33,7 +33,7 @@ export const featuresPerks = {
     4: 'Magic resistance increased by 30 for all allies.',
   },
   Satyr: {
-    1: 'Hides your bench from enemy vision as long as a satyr is on your bench.',
+    1: 'Hides your bench from other players\' vision when there are Satyrs in your waiting bench. Hides your pieces on the chess board until the battle begins if you have a Satyr on the board.',
   },
   Troll: {
     2: 'Attack speed increased by 35 for all friendly trolls.',
@@ -54,8 +54,8 @@ export const featuresPerks = {
     4: 'two ★★druids can upgrade to a ★★★druid.',
   },
   Hunter: {
-    3: 'Attack damage increased by 25% for all friendly hunters.',
-    6: 'Attack damage increased by 30% for all friendly hunters.',
+    3: 'All friendly hunters have +30 base attack damage, and have +30% chance to pierce through evasion.',
+    6: 'All friendly hunters have additional +40 base attack damage and +40% chance to pierce through evasion.',
   },
   Knight: {
     2: 'All friendly knights +25% chance to get a shield.',
