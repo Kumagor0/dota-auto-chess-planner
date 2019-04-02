@@ -232,6 +232,18 @@ class HeroesList extends React.Component<
       location: { pathname },
     } = this.props;
 
+    const featuresCount = getFeaturesCount(pickedHeroes);
+
+    const demonHunters = featuresCount.find(
+      ({ feature }) => feature === 'Demon Hunter'
+    );
+
+    const demonHuntersCount = demonHunters ? demonHunters.count : 0;
+
+    const synergiesCount = featuresCount.filter(
+      ({ activePerks }) => activePerks.length > 0
+    ).length;
+
     return (
       <div style={{ width: '100%' }}>
         <h2 style={{ color: 'White' }}>
@@ -239,7 +251,7 @@ class HeroesList extends React.Component<
           names to sort the list. Copy link from the address bar to share your
           lineup.
         </h2>
-        <h3 style={{ color: 'White' }}>Last patch: 2019/03/16</h3>
+        <h3 style={{ color: 'White' }}>Last patch: 2019/03/29</h3>
         <div style={{ flexDirection: 'row', display: 'flex' }}>
           <h3 style={{ float: 'left', display: 'inline' }}>
             <Link to={pathname}>Clear lineup</Link>
@@ -293,18 +305,30 @@ class HeroesList extends React.Component<
             <div style={{ color: 'White' }}>
               <h2>Team size: {pickedHeroes.length}</h2>
 
-              {getFeaturesCount(pickedHeroes).map(
-                ({ feature, count, activePerks }) => (
-                  <div key={feature} style={{ margin: '10px' }}>
-                    <Feature name={feature} /> x {count}
-                    {activePerks.map(({ requiredCount, description }) => (
+              {featuresCount.map(({ feature, count, activePerks }) => (
+                <div key={feature} style={{ margin: '10px' }}>
+                  <Feature name={feature} /> x {count}
+                  {activePerks.map(({ requiredCount, description }) => {
+                    if (feature === 'God' && synergiesCount >= 1) {
+                      return null;
+                    }
+                    // console.log(featuresCount);
+                    if (
+                      feature === 'Demon' &&
+                      count > 1 &&
+                      demonHuntersCount < 2
+                    ) {
+                      return null;
+                    }
+
+                    return (
                       <div key={requiredCount}>
                         ({requiredCount}): {description}
                       </div>
-                    ))}
-                  </div>
-                )
-              )}
+                    );
+                  })}
+                </div>
+              ))}
             </div>
           </div>
         </div>

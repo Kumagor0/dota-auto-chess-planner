@@ -91,6 +91,13 @@ export const heroes: Array<HeroType> = [
     code: 'tn',
   },
   {
+    name: 'Mars',
+    species: ['God'],
+    className: 'Warrior',
+    cost: 1,
+    code: 'ms',
+  },
+  {
     name: 'Crystal Maiden',
     species: ['Human'],
     className: 'Mage',
@@ -218,20 +225,20 @@ export const heroes: Array<HeroType> = [
     cost: 3,
     code: 'ab',
   },
-  {
-    name: 'Sand King',
-    species: ['Beast'],
-    className: 'Assassin',
-    cost: 3,
-    code: 'sk',
-  },
-  {
-    name: 'Slark',
-    species: ['Naga'],
-    className: 'Assassin',
-    cost: 3,
-    code: 'mu',
-  },
+  // {
+  //   name: 'Sand King',
+  //   species: ['Beast'],
+  //   className: 'Assassin',
+  //   cost: 3,
+  //   code: 'sk',
+  // },
+  // {
+  //   name: 'Slark',
+  //   species: ['Naga'],
+  //   className: 'Assassin',
+  //   cost: 3,
+  //   code: 'mu',
+  // },
   {
     name: 'Sniper',
     species: ['Dwarf'],
@@ -261,13 +268,13 @@ export const heroes: Array<HeroType> = [
     code: 'sf',
   },
   { name: 'Lina', species: ['Human'], className: 'Mage', cost: 3, code: 'li' },
-  {
-    name: 'Riki',
-    species: ['Satyr'],
-    className: 'Assassin',
-    cost: 3,
-    code: 'rk',
-  },
+  // {
+  //   name: 'Riki',
+  //   species: ['Satyr'],
+  //   className: 'Assassin',
+  //   cost: 3,
+  //   code: 'rk',
+  // },
   {
     name: 'Mirana',
     species: ['Elf'],
@@ -387,6 +394,13 @@ export const heroes: Array<HeroType> = [
     className: 'Warlock',
     cost: 5,
     code: 'dp',
+  },
+  {
+    name: 'Zeus',
+    species: ['God'],
+    className: 'Mage',
+    cost: 5,
+    code: 'zs',
   },
 ];
 

@@ -29,25 +29,25 @@ export const featuresPerks = {
     6: 'All friendly humans have 30% chance to silence target for 4s on damage deal.',
   },
   Naga: {
-    2: 'Magic resistance increased by 30 for all allies.',
-    4: 'Magic resistance increased by 30 for all allies.',
+    2: 'Magic resistance increased by 40 for all allies.',
+    // 4: 'Magic resistance increased by 30 for all allies.',
   },
   Satyr: {
-    1: 'Hides your bench from other players\' vision when there are Satyrs in your waiting bench. Hides your pieces on the chess board until the battle begins if you have a Satyr on the board.',
+    1: "Hides your bench from other players' vision when there are Satyrs in your waiting bench. Hides your pieces on the chess board until the battle begins if you have a Satyr on the board.",
   },
   Troll: {
     2: 'Attack speed increased by 35 for all friendly trolls.',
     4: 'Attack speed increased by 30 for all allies.',
   },
   Beast: {
-    2: 'Attack damage increased by 15% for all allies.',
+    2: 'Attack damage increased by 10% for all allies.',
     4: 'Attack damage increased by 20% for all allies.',
-    6: 'Attack damage increased by 25% for all allies.',
+    // 6: 'Attack damage increased by 25% for all allies.',
   },
   Assassin: {
-    3: 'All friendly assasins have 10% chance to deal 3.5x damage.',
+    3: 'All friendly assasins have 15% chance to deal 3.5x damage.',
     6: 'All friendly assasins have 20% chance to deal 4.5x damage.',
-    9: 'All friendly assasins have an additional 20% chance to deal 5x damage.',
+    // 9: 'All friendly assasins have an additional 20% chance to deal 5x damage.',
   },
   Druid: {
     2: 'two ★druids can upgrade to a ★★druid.',
@@ -78,8 +78,18 @@ export const featuresPerks = {
     6: 'Lifesteal increased by 30% for all allies.',
   },
   Warrior: {
-    3: 'Armor increased by 7 for all friendly warriors.',
-    6: 'Armor increased by an additional 8 for all friendly warriors.',
+    3: 'Armor increased by 5 for all friendly warriors.',
+    6: 'Armor increased by an additional 7 for all friendly warriors.',
     9: 'Armor increased by an additional 9 for all friendly warriors.',
+  },
+  God: {
+    1: 'All allies cooldown gets reduced by 50%.',
+  },
+  Demon: {
+    1: 'Deal 50% extra pure damage to the target.',
+  },
+  'Demon Hunter': {
+    1: 'Negate enemy demon power.',
+    2: 'All friendly demons retain their Fel Power',
   },
 };

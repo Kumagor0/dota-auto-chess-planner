@@ -10,6 +10,7 @@ export const colors = {
     Dragon: 'Maroon',
     Dwarf: 'Chocolate',
     Demon: 'BlueViolet',
+    God: 'Cyan',
     Ogre: 'DeepSkyBlue',
     Elf: 'DodgerBlue',
     Undead: 'Grey',
