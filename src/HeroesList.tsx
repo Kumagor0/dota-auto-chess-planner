@@ -13,6 +13,7 @@ import {
 import { colors } from './colors';
 import { withRouter, RouteComponentProps } from 'react-router';
 import { Link } from 'react-router-dom';
+import { species } from './featuresPerks';
 
 type SortableColumnType = 'name' | 'species' | 'class' | 'cost';
 
@@ -240,8 +241,9 @@ class HeroesList extends React.Component<
 
     const demonHuntersCount = demonHunters ? demonHunters.count : 0;
 
-    const synergiesCount = featuresCount.filter(
-      ({ activePerks }) => activePerks.length > 0
+    const speciesSynergiesCount = featuresCount.filter(
+      ({ activePerks, feature }) =>
+        activePerks.length > 0 && species.indexOf(feature) !== -1
     ).length;
 
     return (
@@ -309,10 +311,10 @@ class HeroesList extends React.Component<
                 <div key={feature} style={{ margin: '10px' }}>
                   <Feature name={feature} /> x {count}
                   {activePerks.map(({ requiredCount, description }) => {
-                    if (feature === 'God' && synergiesCount >= 1) {
+                    if (feature === 'God' && speciesSynergiesCount > 1) {
                       return null;
                     }
-                    // console.log(featuresCount);
+
                     if (
                       feature === 'Demon' &&
                       count > 1 &&

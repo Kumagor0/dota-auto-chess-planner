@@ -1,3 +1,19 @@
+export const species = [
+  'Dragon',
+  'Elf',
+  'Undead',
+  'Orc',
+  'Goblin',
+  'Element',
+  'Human',
+  'Naga',
+  'Satyr',
+  'Troll',
+  'Beast',
+  'God',
+  'Demon',
+];
+
 export const featuresPerks = {
   Dragon: {
     3: 'All friendly dragons have 100 mana when battle starts.',
@@ -44,6 +60,12 @@ export const featuresPerks = {
     4: 'Attack damage increased by 20% for all allies.',
     // 6: 'Attack damage increased by 25% for all allies.',
   },
+  God: {
+    1: 'All allies cooldown gets reduced by 50%.',
+  },
+  Demon: {
+    1: 'Deal 50% extra pure damage to the target.',
+  },
   Assassin: {
     3: 'All friendly assasins have 15% chance to deal 3.5x damage.',
     6: 'All friendly assasins have 20% chance to deal 4.5x damage.',
@@ -81,12 +103,6 @@ export const featuresPerks = {
     3: 'Armor increased by 5 for all friendly warriors.',
     6: 'Armor increased by an additional 7 for all friendly warriors.',
     9: 'Armor increased by an additional 9 for all friendly warriors.',
-  },
-  God: {
-    1: 'All allies cooldown gets reduced by 50%.',
-  },
-  Demon: {
-    1: 'Deal 50% extra pure damage to the target.',
   },
   'Demon Hunter': {
     1: 'Negate enemy demon power.',
