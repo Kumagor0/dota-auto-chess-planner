@@ -161,13 +161,6 @@ export const heroes: Array<HeroType> = [
     code: 'ck',
   },
   {
-    name: 'Treant Protector',
-    species: ['Elf'],
-    className: 'Druid',
-    cost: 2,
-    code: 'tp',
-  },
-  {
     name: 'Morphling',
     species: ['Element'],
     className: 'Assassin',
@@ -176,6 +169,20 @@ export const heroes: Array<HeroType> = [
   },
   { name: 'Luna', species: ['Elf'], className: 'Knight', cost: 2, code: 'lu' },
   { name: 'Furion', species: ['Elf'], className: 'Druid', cost: 2, code: 'fu' },
+  {
+    name: 'Mirana',
+    species: ['Elf'],
+    className: 'Hunter',
+    cost: 2,
+    code: 'mr',
+  },
+  {
+    name: 'Treant Protector',
+    species: ['Elf'],
+    className: 'Druid',
+    cost: 3,
+    code: 'tp',
+  },
   {
     name: 'Lycan',
     species: ['Human', 'Beast'],
@@ -268,6 +275,13 @@ export const heroes: Array<HeroType> = [
     code: 'sf',
   },
   { name: 'Lina', species: ['Human'], className: 'Mage', cost: 3, code: 'li' },
+  {
+    name: 'Dazzle',
+    species: ['Troll'],
+    className: 'Priest',
+    cost: 3,
+    code: 'dz',
+  },
   // {
   //   name: 'Riki',
   //   species: ['Satyr'],
@@ -275,13 +289,6 @@ export const heroes: Array<HeroType> = [
   //   cost: 3,
   //   code: 'rk',
   // },
-  {
-    name: 'Mirana',
-    species: ['Elf'],
-    className: 'Hunter',
-    cost: 3,
-    code: 'mr',
-  },
   {
     name: 'Doom',
     species: ['Demon'],
@@ -401,6 +408,13 @@ export const heroes: Array<HeroType> = [
     className: 'Mage',
     cost: 5,
     code: 'zs',
+  },
+  {
+    name: 'Io',
+    species: ['Elf'],
+    className: '',
+    cost: 5,
+    code: 'io',
   },
 ];
 

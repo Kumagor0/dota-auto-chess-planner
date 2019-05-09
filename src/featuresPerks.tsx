@@ -28,8 +28,8 @@ export const featuresPerks = {
     4: 'Armor decreased by 6 for all enemies.',
   },
   Orc: {
-    2: 'Max HP increased by 200 for all friendly orcs.',
-    4: 'Max HP increased by 300 for all friendly orcs.',
+    2: 'Max HP increased by 250 for all friendly orcs.',
+    4: 'Max HP increased by 350 for all friendly orcs.',
   },
   Goblin: {
     3: 'Armor and hp regeneration increased by 15 for a random ally.',
@@ -45,7 +45,7 @@ export const featuresPerks = {
     6: 'All friendly humans have 30% chance to silence target for 4s on damage deal.',
   },
   Naga: {
-    2: 'Magic resistance increased by 40 for all allies.',
+    2: 'Magic resistance increased by 35 for all allies.',
     // 4: 'Magic resistance increased by 30 for all allies.',
   },
   Satyr: {
@@ -68,7 +68,7 @@ export const featuresPerks = {
   },
   Assassin: {
     3: 'All friendly assasins have 15% chance to deal 3.5x damage.',
-    6: 'All friendly assasins have 20% chance to deal 4.5x damage.',
+    6: 'All friendly assasins have 15% chance to deal 4.5x damage.',
     // 9: 'All friendly assasins have an additional 20% chance to deal 5x damage.',
   },
   Druid: {
@@ -80,9 +80,8 @@ export const featuresPerks = {
     6: 'All friendly hunters have additional +40 base attack damage and +40% chance to pierce through evasion.',
   },
   Knight: {
-    2: 'All friendly knights +25% chance to get a shield.',
-    4: 'All friendly knights +35% chance to get a shield.',
-    6: 'All friendly knights +45% chance to get a shield.',
+    3: 'All friedly knights have 40% chance to proc a damage-reducing shield.',
+    6: 'All allies have 40% chance to proc a damage-reducing shield.',
   },
   Mage: {
     3: 'Magic resistance decreased by 40% for all enemies.',
@@ -92,12 +91,15 @@ export const featuresPerks = {
     2: 'HP regeneration increased by 15 for all friendly mechs.',
     4: 'HP regeneration increased by 25 for all friendly mechs.',
   },
+  Priest: {
+    1: 'Reduce damage to your courier by 20%.',
+  },
   Shaman: {
     2: 'Hex an enemy when battle starts.',
   },
   Warlock: {
-    3: 'Lifesteal increased by 20% for all allies.',
-    6: 'Lifesteal increased by 30% for all allies.',
+    3: 'All allies have +15% lifesteal and +15% spell lifesteal.',
+    6: 'Warlocks: All allies have +25% lifesteal and +25% spell lifesteal.',
   },
   Warrior: {
     3: 'Armor increased by 5 for all friendly warriors.',

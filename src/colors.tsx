@@ -29,6 +29,7 @@ export const colors = {
     Knight: 'Pink',
     Mage: 'Turquoise',
     Mech: 'Sienna',
+    Priest: 'White',
     Shaman: 'Blue',
     Warlock: 'MediumPurple',
     Warrior: 'PeachPuff',
