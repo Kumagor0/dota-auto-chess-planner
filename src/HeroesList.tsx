@@ -243,7 +243,7 @@ class HeroesList extends React.Component<
 
     const speciesSynergiesCount = featuresCount.filter(
       ({ activePerks, feature, count }) => {
-        if (feature === 'Demon' && demonHuntersCount === 0 && count > 1) {
+        if (feature === 'Demon' && demonHuntersCount < 2 && count > 1) {
           return false;
         }
 
