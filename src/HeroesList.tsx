@@ -258,7 +258,7 @@ class HeroesList extends React.Component<
           names to sort the list. Copy link from the address bar to share your
           lineup.
         </h2>
-        <h3 style={{ color: 'White' }}>Last patch: 2019/05/09</h3>
+        <h3 style={{ color: 'White' }}>Last patch: 2019/05/25</h3>
         <div style={{ flexDirection: 'row', display: 'flex' }}>
           <h3 style={{ float: 'left', display: 'inline' }}>
             <Link to={pathname}>Clear lineup</Link>

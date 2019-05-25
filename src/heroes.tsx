@@ -176,6 +176,7 @@ export const heroes: Array<HeroType> = [
     cost: 2,
     code: 'mr',
   },
+  { name: 'Lich', species: ['Undead'], className: 'Mage', cost: 2, code: 'ch' },
   {
     name: 'Treant Protector',
     species: ['Elf'],
@@ -373,7 +374,6 @@ export const heroes: Array<HeroType> = [
     cost: 5,
     code: 'gc',
   },
-  { name: 'Lich', species: ['Undead'], className: 'Mage', cost: 5, code: 'ch' },
   {
     name: 'Tide Hunter',
     species: ['Naga'],
@@ -415,6 +415,13 @@ export const heroes: Array<HeroType> = [
     className: '',
     cost: 5,
     code: 'io',
+  },
+  {
+    name: 'Sven',
+    species: ['Demon'],
+    className: 'Warrior',
+    cost: 5,
+    code: 'sv',
   },
 ];
 
