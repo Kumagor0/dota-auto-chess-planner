@@ -98,6 +98,13 @@ export const heroes: Array<HeroType> = [
     code: 'ms',
   },
   {
+    name: 'Wintern Wyvern',
+    species: ['Dragon'],
+    className: 'Mage',
+    cost: 1,
+    code: 'ww',
+  },
+  {
     name: 'Crystal Maiden',
     species: ['Human'],
     className: 'Mage',
